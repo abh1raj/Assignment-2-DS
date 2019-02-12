@@ -55,6 +55,24 @@ class DLL
         size++;
     }
     
+    public void insPos(int n, int val)
+    {
+        Node1 node = new Node1(val);
+        Node1 temp = head;
+        Node1 temp2;
+        for(int i =1 ; i<n-1 ; i++)
+        {
+            temp=temp.next;
+        }
+        temp2=temp.next;
+        temp.next = node;
+        temp2.prev = node;
+        node.prev = temp;
+        node.next = temp2;
+        size++;
+    }
+    
+    
     public void trav()
     {
         Node1 temp = head;
@@ -134,7 +152,7 @@ class DLL
     public void delPosition(int n)
     {
         Node1 temp = head;
-        Node1 temp2 = head;
+        Node1 temp2;
         if(n>size)
         {
             System.out.println("Out of bounds!");
@@ -174,13 +192,10 @@ public class DoublyLL {
         d.insBeg(9465);
         System.out.println("Elements are:");
         d.trav();
-        System.out.println("After deletion:");
-        d.delBeg();
-        d.delBeg();
+        System.out.println("After deletion from beg:");
         d.delBeg();
         d.trav();
         System.out.println("after deletion from end:");
-        d.delEnd();
         d.delEnd();
         d.trav();
         d.delBeg();
@@ -188,6 +203,9 @@ public class DoublyLL {
         d.revTrav();
         System.out.println("After deleting from position:");
         d.delPosition(3);
+        d.trav();
+        System.out.println("After entering element at a position:");
+        d.insPos(3, 999);
         d.trav();
     }
     
