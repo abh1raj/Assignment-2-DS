@@ -154,6 +154,7 @@ class DLL
             }
             
         }
+        size--;
     }
     
 }
@@ -173,18 +174,18 @@ public class DoublyLL {
         d.insBeg(9465);
         System.out.println("Elements are:");
         d.trav();
-//        System.out.println("After deletion:");
-//        d.delBeg();
-//        d.delBeg();
-//        d.delBeg();
-//        d.trav();
-//        System.out.println("after deletion from end:");
-//        d.delEnd();
-//        d.delEnd();
-//        d.trav();
-//        d.delBeg();
-//        System.out.println("In Reverse Order:");
-//        d.revTrav();
+        System.out.println("After deletion:");
+        d.delBeg();
+        d.delBeg();
+        d.delBeg();
+        d.trav();
+        System.out.println("after deletion from end:");
+        d.delEnd();
+        d.delEnd();
+        d.trav();
+        d.delBeg();
+        System.out.println("In Reverse Order:");
+        d.revTrav();
         System.out.println("After deleting from position:");
         d.delPosition(3);
         d.trav();
